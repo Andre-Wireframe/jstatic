@@ -1,0 +1,361 @@
+@import url(animations.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Button generic */
+
+.boton-1 {
+    font-size: 20px;
+    background-color: rgb(55, 89, 122);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: solid 0.5px black;
+    padding: 10px 15px;
+    animation-duration: 1s;
+    transition-duration: 0.3s;
+}
+
+.boton-1:hover {
+    transform: scale(110%, 110%);
+    box-shadow: 5px 5px 5px rgb(40, 39, 39);
+}
+
+/* Barra de navegacion */
+
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    min-height: 75px;
+    width: 100%;
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+}
+
+.nav-2 a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-item:hover {
+    transform: translateY(3px);
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 750px) {
+
+    .nav-1 {
+        flex: 40%;
+        margin-left: 40px;
+    }
+
+    .nav-2 {
+        flex: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-right: 20px;
+    }
+
+    #nav-button {
+        display: none;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-1 {
+        flex: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 30px;
+    }
+
+    .nav-2 {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-2 li {
+        line-height: 30px;
+    }
+
+    #nav-button {
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: 1px solid white;
+    }
+
+}
+
+/* Header o cabecera de pagina */
+
+header {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.hero {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.hero h2 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Seccion 1 */
+
+.section-1 {
+    background-color: rgb(22, 76, 131);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 90vh;
+}
+
+@media (min-width: 400px) {
+
+    .section-1 {
+        justify-content: space-evenly;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .section-1 {
+        justify-content: center;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+
+    .box {
+        margin: 20px;
+    }
+
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 200px;
+    background-color: rgb(60, 79, 202);
+    height: 350px;
+    transition-duration: 0.5s;
+}
+
+.box:hover {
+    transform: translate(-5px, -5px);
+    transform: scale(105%, 105%);
+    box-shadow: 10px 10px 10px rgb(60, 59, 59);
+}
+
+.box .text-1 {
+    line-height: 25px;
+    margin: 20px 0;
+    font-size: 17px;
+}
+
+.logo {
+    border-radius: 100%;
+    border: solid 0.5px black;
+    background-color: aqua;
+    width: 120px;
+    height: 120px;
+}
+
+/* Analisis foda */
+
+.sec-2 {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: url(img/image.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.foda-card {
+    width: 450px;
+    min-height: 200px;
+    background-color: rgba(94, 183, 218, 0.9);
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    border: solid 2px rgb(13, 0, 255);
+}
+
+.foda-center {
+    position: absolute;
+    z-index: 9;
+    background-color: rgb(23, 48, 230);
+    border: solid 40px rgb(8, 197, 245);
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.foda-title {
+    background-color: rgb(52, 150, 220);
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.foda-title-2 {
+    text-align: right;
+}
+
+.foda-text {
+    font-size: 18px;
+    margin: 15px 150px 15px 15px;
+    line-height: 24px;
+    height: 100%;
+    text-align: left;
+}
+
+.foda-text-2 {
+    margin: 15px 15px 15px 150px;
+    text-align: right;
+}
+
+@media (max-width: 980px) {
+
+    .foda-center {
+        border: solid 30px white;
+        width: 120px;
+        height: 120px;
+    }
+
+    .foda-card {
+        width: 300px;
+    }
+
+    .foda-text {
+        margin: 15px 80px 15px 15px;
+    }
+
+    .foda-text-2 {
+        margin: 15px 15px 15px 80px;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .foda-center {
+        display: none;
+        position: static;
+    }
+
+    .sec-2 {
+        flex-direction: column;
+        position: static;
+    }
+
+    .foda-title-2 {
+        text-align: left;
+    }
+
+    .foda-text {
+        margin: 15px;
+    }
+
+    .foda-text-2 {
+        margin: 15px;
+        text-align: left;
+    }
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 50vh;
+    background-color: rgb(94, 196, 247);
+}
+
+.fot-item {
+    margin: 40px;
+}
+
+.fot-title {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.fot-list-item {
+    line-height: 30px;
+    font-size: 15px;
+}
+
+.fot-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fot-title-2 {
+    font-size: 20px;
+}
+
+@media (max-width: 700px) {
+
+    footer {
+        flex-direction: column;
+    }
+
+}
